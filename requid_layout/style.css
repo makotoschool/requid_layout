@@ -1,0 +1,99 @@
+/*
+↓これはclear:bothを書ける箱がない時用に
+疑似要素で箱作ってそれにclear:both書いてる
+*/
+
+.clearfix:after{
+content:".";
+display:block;
+height:0px;
+clear:both;
+visibility:hidden;
+}
+/*↑ここまで */
+
+body{
+margin:0;
+padding:0;	
+}
+.container{
+/*width:960px;*/
+width:90%;
+margin:0 auto;
+}
+
+.header{
+height:100px;
+background-color:#F7BBBB;
+}
+
+.main{
+background-color: #E5DEDE;	
+}
+
+.leftbox{
+width:240px;
+height:560px;
+float:left;
+background-color:#C2F8F9;
+}
+.nav{
+width:100%;
+background-color:#E0DE98;
+}
+
+.rightbox{
+width:720px;
+float:left;
+}
+
+
+
+.footer{
+height:50px;
+background-color:#6058FC;
+clear:both;
+}
+
+.box{
+width:220px;
+height:100px;
+background-color:#D9B3FC;
+margin:10px 10px 0 10px;
+float:left;
+}
+
+/*
+ここからナビゲーションのスタイル
+
+*/
+.nav ul{
+margin:0;
+padding:0;
+list-style-type:none;
+}
+
+.nav li a{
+text-decoration:none;
+display:block;
+float:left;
+width:159px;
+text-align:center;
+line-height:20px;
+border-right:1px solid #000;
+}
+
+.nav li:last-child a{
+border:none;
+}
+
+.nav li a:hover{
+background-color:#F75454;
+color:#fff;
+
+}
+
+/*
+ここまでナビゲーションのスタイル
+
+*/
