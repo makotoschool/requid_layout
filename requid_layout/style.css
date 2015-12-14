@@ -32,7 +32,8 @@ background-color: #E5DEDE;
 }
 
 .leftbox{
-width:240px;
+/*width:240px;*/
+width:25%;
 height:560px;
 float:left;
 background-color:#C2F8F9;
@@ -43,7 +44,8 @@ background-color:#E0DE98;
 }
 
 .rightbox{
-width:720px;
+/*width:720px;*/
+width:75%;
 float:left;
 }
 
@@ -56,10 +58,11 @@ clear:both;
 }
 
 .box{
-width:220px;
+/*width:220px;*/
+width:30.55%;
 height:100px;
 background-color:#D9B3FC;
-margin:10px 10px 0 10px;
+margin:10px 1.38% 0 1.38%;
 float:left;
 }
 
@@ -77,7 +80,8 @@ list-style-type:none;
 text-decoration:none;
 display:block;
 float:left;
-width:159px;
+/*width:159px;*/
+width:16.55%;
 text-align:center;
 line-height:20px;
 border-right:1px solid #000;
@@ -97,3 +101,5 @@ color:#fff;
 ここまでナビゲーションのスタイル
 
 */
+
+
