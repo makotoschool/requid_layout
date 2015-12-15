@@ -1,0 +1,178 @@
+/*
+↓これはclear:bothを書ける箱がない時用に
+疑似要素で箱作ってそれにclear:both書いてる
+*/
+
+.clearfix:after{
+content:".";
+display:block;
+height:0px;
+clear:both;
+visibility:hidden;
+}
+/*↑ここまで */
+
+body{
+margin:0;
+padding:0;	
+}
+.container{
+/*width:960px;*/
+width:90%;
+margin:0 auto;
+/*min-width:500px;*/
+/*max-width:1000px;*/
+}
+
+.header{
+height:100px;
+background-color:#F7BBBB;
+}
+
+.main{
+background-color: #E5DEDE;	
+}
+
+.leftbox{
+/*width:240px;*/
+width:25%;
+height:560px;
+float:left;
+background-color:#C2F8F9;
+}
+.nav{
+width:100%;
+background-color:#E0DE98;
+}
+
+.rightbox{
+/*width:720px;*/
+width:75%;
+float:left;
+}
+
+
+
+.footer{
+height:50px;
+background-color:#6058FC;
+clear:both;
+}
+
+.box{
+/*width:220px;*/
+/*width:30.55%;*/
+/*左右のmarginは絶対値で10pxの場合*/
+width:calc(240 / 720 * 100% - 20px);
+height:100px;
+background-color:#D9B3FC;
+margin:10px 10px 0 10px;
+/*margin:10px 1.38% 0 1.38%;*/
+float:left;
+}
+
+/*
+ここからナビゲーションのスタイル
+
+*/
+.nav ul{
+margin:0;
+padding:0;
+list-style-type:none;
+}
+
+.nav li a{
+text-decoration:none;
+display:block;
+float:left;
+/*box-sizing:border-box;*/
+/*width:159px;*/
+width:calc(159 / 960 * 100% - 1px);
+text-align:center;
+line-height:20px;
+border-right:1px solid #000;
+}
+
+.nav li:last-child a{
+border:none;
+}
+
+.nav li a:hover{
+background-color:#F75454;
+color:#fff;
+
+}
+
+/*
+ここまでナビゲーションのスタイル
+
+*/
+
+
+/*---breakpoint700px-----*/
+
+@media screen and (max-width:700px) {
+	.container {
+		width:100%;
+	}
+	
+	.leftbox,.rightbox {
+	float:none;
+	width:100%;
+	}
+	.leftbox{
+	height:500px;
+	}
+	.box {
+	width:calc(50% - 20px);
+	height:300px;
+	}
+	
+	.nav li a {
+	width:calc(100% / 3 - 1px);
+	width:-moz-calc(100% / 3 - 1px);
+	width:-webkit-calc(100% / 3 - 1px);
+	height:60px;
+	line-height:60px;
+	}
+	
+
+	.nav li:nth-child(3) a {
+	border-right:none;
+	}
+	
+	.nav li:nth-child(-n+3) a {
+	border-bottom:1px solid #000
+	
+	}
+}
+
+/*--breakpoint 400px-----*/
+@media screen and (max-width:400px) {
+
+.nav li a {
+float:none;
+width:100%;
+}
+
+.nav li:not(:last-child) a {
+border-bottom:1px solid #000;
+
+}
+
+.box {
+float:none;
+width:100%;
+height:500px;
+}
+
+
+
+
+}
+
+
+
+
+
+
