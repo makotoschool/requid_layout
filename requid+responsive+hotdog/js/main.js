@@ -9,7 +9,8 @@ $(function(){
 					textAlign:'center',
 					lineHeight:'40px',
 					fontWeight:'bold',
-					fontSize:'2em'	
+					fontSize:'2em',
+					cursor:'pointer'	
 	}).hide();//普段は隠しておく
 
 //ブラウザのウィンドウサイズを取得作戦
@@ -22,16 +23,38 @@ $('.container').after('<p id="valbox">現在<span id="val"></span>pxです</p>')
 					fontSize:'2.2em'
 						
 	});	
-var wsize=$(window).width();	
-$('#val').text(wsize);
+
 
 	//ブラウザをリサイズした時の世界
 	$(window).resize(function(){
-		var wsize=$(window).width();	
+		var wsize=$(window).width()+17;	
 		$('#val').text(wsize);
-
+		if(wsize <= 400){
+			$('#hotdog').show();
+			$('.nav ul').hide();
+		}else{
+			$('#hotdog').hide();
+			$('.nav ul').show();
+		}
+	
 	});
+//リロードした時もホットドックメニュー作戦が実行されるように	
+var wsize=$(window).width()+17;	
+		$('#val').text(wsize);
+		if(wsize <= 400){
+			$('#hotdog').show();
+			$('.nav ul').hide();
+		}else{
+			$('#hotdog').hide();
+			$('.nav ul').show();
+		}
 
+//ホットドッグメニューをクリックした世界
+$('#hotdog').click(function(){
+	$('.nav ul').slideToggle(1000);
+});		
+		
+		
 
 
 
