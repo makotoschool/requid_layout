@@ -23,6 +23,14 @@ $('.container').after('<p id="valbox">現在<span id="val"></span>pxです</p>')
 						
 	});	
 var wsize=$(window).width();	
+$('#val').text(wsize);
+
+	//ブラウザをリサイズした時の世界
+	$(window).resize(function(){
+		var wsize=$(window).width();	
+		$('#val').text(wsize);
+
+	});
 
 
 
