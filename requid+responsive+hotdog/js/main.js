@@ -1,17 +1,24 @@
 $(function(){
+//ローディングメッセージを出す
+$('body').prepend('<div id="load"><i id="spin" class="fa fa-spinner fa-pulse"></i></div>');
+$('#load').css({
+			width:'100%',
+			height:'100vh',
+			position:'absolute',
+			zIndex:100,
+			backgroundColor:'#fff'
+});
+$('#spin').css({
+			fontSize:'6rem',
+			position:'absolute',
+			top:'48%',
+			left:'48%'
+			
+
+});
+
 //ホットドッグメニューを作る
-	$('.nav').prepend('<p id="hotdog">三</p>');
-	$('#hotdog').css({
-					margin:0,
-					backgroundColor:'#3D3737',
-					color:'#fff',
-					height:'40px',
-					textAlign:'center',
-					lineHeight:'40px',
-					fontWeight:'bold',
-					fontSize:'2em',
-					cursor:'pointer'	
-	}).hide();//普段は隠しておく
+
 
 //ブラウザのウィンドウサイズを取得作戦
 //表示する箱をつくる
@@ -53,9 +60,5 @@ var wsize=$(window).width()+17;
 $('#hotdog').click(function(){
 	$('.nav ul').slideToggle(1000);
 });		
-		
-		
-
-
 
 });//End jquery
