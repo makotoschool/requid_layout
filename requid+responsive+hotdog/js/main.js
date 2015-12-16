@@ -70,7 +70,7 @@ var wsize=$(window).width()+17;
 
 //ホットドッグメニューをクリックした世界
 $('#hotdog').click(function(){
-	$('.nav ul').slideToggle(1000);
+	$('.nav ul').slideToggle(500);
 });	
 
 
@@ -79,7 +79,7 @@ $('#hotdog').click(function(){
 $('body').append('<p id="gotop">上へ戻る</p>');
 $('#gotop').css({
 			position:'fixed',
-			bottom:100,
+			bottom:20,
 			right:20,
 			backgroundColor:'rgba(242,41,148,0.8)',
 			color:'#fff',
@@ -90,7 +90,8 @@ $('#gotop').css({
 //スクロール値を取得作戦
 	//ブラウザスクロールの世界
 	$(window).scroll(function(){
-		var sval=$('body,html').scrollTop();
+		//var sval=$('body,html').scrollTop();
+		var sval=$(document).scrollTop();
 		$('#val').text(sval);
 		
 		if(sval>=800){
