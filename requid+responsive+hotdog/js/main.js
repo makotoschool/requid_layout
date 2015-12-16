@@ -19,7 +19,7 @@ $('#spin').css({
 });
 */
 //ホットドッグメニューを作る
-$('.nav').prepend('<p id="hotdog">三</p>');
+$('.nav').prepend('<p id="hotdog"><i class="fa fa-bars"></i></p>');
 	$('#hotdog').css({
 					margin:0,
 					backgroundColor:'#3D3737',
